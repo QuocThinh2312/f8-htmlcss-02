@@ -41,6 +41,10 @@ a {
     text-align: center;
 }
 
+.btn:hover {
+    opacity: 0.8;
+}
+
 /* Header */
 .header {
     position: sticky;
@@ -68,6 +72,11 @@ a {
     padding: 8px 21px;
     color: #5f5b53;
     font-weight: 400;
+}
+
+.nav li:not(:first-child) a:hover {
+    color: var(--secondary-color);
+    text-shadow: 1px 0 0 currentColor;
 }
 
 .nav ul li:first-child a {
