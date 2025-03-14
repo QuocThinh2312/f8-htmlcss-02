@@ -8,6 +8,11 @@
     --font-heading: 'Sen', sans-serif;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -671,4 +676,97 @@ a {
 .blog .dot.active {
     background: var(--primary-color);
     cursor: default;
+}
+
+/* Footer */
+.footer {
+    padding: 96px 135px 0;
+    background: #2e2100;
+}
+
+.footer .row {
+    display: flex;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #59554b;
+}
+
+.footer .column {
+    width: 22.2%;
+}
+
+.footer .column:first-child {
+    width: 35%;
+}
+
+.footer .desc {
+    max-width: 267px;
+    margin: 18px 0;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+}
+
+.footer .title,
+.footer strong {
+    color: #fff;
+    font-weight: 600;
+    line-height: 2.8rem;
+}
+
+.footer .title {
+    display: inline-block;
+    padding: 0 48px 14px 0;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #59554b;
+}
+
+.footer .list a {
+    display: inline-block;
+    padding-bottom: 12px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+}
+
+.footer .column:not(:last-child) .list a:hover,
+.footer span:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer .socials {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer .socials a {
+    color: white;
+}
+
+.footer .socials .twitter:hover {
+    color: #00a2f5;
+}
+
+.footer .socials .facebook:hover {
+    color: #0282ff;
+}
+
+.footer .socials .linkedin:hover {
+    color: #1a75bb;
+}
+
+.footer .socials .instagram:hover {
+    color: #e14565;
+}
+
+.footer .copyright {
+    padding: 28px 0;
+    color: #807d74;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    text-align: center;
 }
