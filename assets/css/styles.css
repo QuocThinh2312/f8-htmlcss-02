@@ -5,7 +5,7 @@
 :root {
     --primary-color: #ffb900;
     --secondary-color: #171100;
-    --font-heading: 'Sen', sans-serif;
+    --font-heading: "Sen", sans-serif;
 }
 
 html,
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
 }
 
@@ -31,6 +31,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+img {
+    display: block;
 }
 
 .btn {
@@ -87,7 +91,6 @@ a {
 .nav a {
     padding: 8px 21px;
     color: #5f5b53;
-    font-weight: 400;
 }
 
 .nav li:not(:first-child) a:hover {
@@ -102,7 +105,7 @@ a {
 }
 
 .nav ul li:first-child a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 6px;
     left: 21px;
@@ -126,18 +129,12 @@ a {
 
 .hero .body {
     display: flex;
-}
-
-.hero .media-block {
-    width: 48%;
-}
-
-.hero .content-block {
-    width: 52%;
-    padding: 64px 0 0 130px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero .heading {
+    width: 470px;
     color: var(--secondary-color);
     font-family: var(--font-heading);
     font-size: 5.8rem;
@@ -149,11 +146,11 @@ a {
 .hero .desc {
     color: #5f5b53;
     font-size: 1.8rem;
-    font-weight: 400;
     line-height: 3rem;
 }
 
 .hero .heading + .desc {
+    width: 470px;
     margin: 22px 0 38px;
 }
 
@@ -219,11 +216,16 @@ a {
 
 .hero .media-block {
     position: relative;
+    width: 40.17%;
+}
+
+.hero .image {
+    width: 100%;
 }
 
 .hero-summary {
     position: absolute;
-    right: -30px;
+    right: -100px;
     bottom: 48px;
     width: 270px;
     padding: 24px;
@@ -263,7 +265,6 @@ a {
 .hero-summary .label {
     color: #5f5b53;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 2.6rem;
 }
 
@@ -299,16 +300,15 @@ a {
     width: 458px;
     color: #5f5b53;
     font-size: 1.8rem;
-    font-weight: 400;
     line-height: 3rem;
 }
 
-.popular-top .control {
+.popular .control {
     display: flex;
     gap: 18px;
 }
 
-.popular-top .control-btn {
+.popular .control-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,7 +320,7 @@ a {
     color: var(--primary-color);
 }
 
-.popular-top .control-btn:hover {
+.popular .control-btn:hover {
     background: var(--primary-color);
     color: white;
     cursor: pointer;
@@ -328,6 +328,7 @@ a {
 
 .popular .course-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 55px;
 }
@@ -373,7 +374,6 @@ a {
     margin-bottom: 12px;
     color: #5f5b53;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 2.6rem;
 }
 
@@ -385,8 +385,6 @@ a {
 
 .popular .course-item .value {
     color: #fea31b;
-    font-size: 1.6rem;
-    font-weight: 400;
 }
 
 .popular .foot {
@@ -447,7 +445,6 @@ a {
 .feedback-item .desc {
     color: #bfbcb2;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 2.6rem;
 }
 
@@ -481,7 +478,6 @@ a {
     color: #fff;
     font-size: 2.6rem;
     font-style: italic;
-    font-weight: 400;
     line-height: 4rem;
 }
 
@@ -532,8 +528,6 @@ a {
 .features .text .desc {
     margin-top: 16px;
     color: #5f5b53;
-    font-size: 1.6rem;
-    font-weight: 400;
     line-height: 2.8rem;
 }
 
@@ -575,7 +569,6 @@ a {
     width: 448px;
     margin: 16px auto 0;
     color: #696262;
-    font-weight: 400;
     line-height: 2.8rem;
     text-align: center;
 }
@@ -616,12 +609,11 @@ a {
     padding-bottom: 12px;
     color: #5f5b53;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 2.6rem;
 }
 
 .blog .date::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 6px;
     height: 6px;
@@ -631,7 +623,7 @@ a {
 }
 
 .blog .date::after {
-    content: '';
+    content: "";
     position: absolute;
     right: -27px;
     bottom: 0;
@@ -680,7 +672,7 @@ a {
 
 /* Footer */
 .footer {
-    padding: 96px 135px 0;
+    padding-top: 96px;
     background: #2e2100;
 }
 
@@ -691,11 +683,11 @@ a {
 }
 
 .footer .column {
-    width: 22.2%;
+    flex: 1;
 }
 
 .footer .column:first-child {
-    width: 35%;
+    flex: 2;
 }
 
 .footer .desc {
@@ -703,7 +695,6 @@ a {
     margin: 18px 0;
     color: #bfbcb2;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 2.6rem;
 }
 
@@ -726,7 +717,6 @@ a {
     padding-bottom: 12px;
     color: #bfbcb2;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 2.6rem;
 }
 
@@ -766,7 +756,6 @@ a {
     padding: 28px 0;
     color: #807d74;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 2.6rem;
     text-align: center;
 }

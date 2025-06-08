@@ -96,12 +96,25 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- Header -->
         <header class="header">
             <div class="content">
                 <div class="body">
+                    <!-- Mobile Menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
                     <a href="#">
                         <img
@@ -135,6 +148,49 @@
             </div>
         </header>
 
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name="menu-checkbox"
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Drawer -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="./assets/img/logo.svg" alt="Lesson." />
+                </a>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#courses">Courses</a>
+                        </li>
+                        <li>
+                            <a href="#reviews">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#!">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <!-- Main -->
         <main>
             <!-- Hero -->
@@ -145,7 +201,7 @@
                             <img
                                 src="./assets/img/hero-img.png"
                                 alt="Learn without limits and spread knowledge."
-                                class="image"
+                                class="image hide-on-mobile"
                             />
                             <div class="hero-summary">
                                 <div class="item">
@@ -185,35 +241,68 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="content-block">
-                            <h1 class="heading">
-                                Learn without limits and spread knowledge.
-                            </h1>
-                            <p class="desc">
-                                Build new skills for that “this is my year”
-                                feeling with courses, certificates, and degrees
-                                from world-class universities and companies.
-                            </p>
-                            <div class="cta-group">
-                                <a href="#!" class="btn hero-cta"
-                                    >See Courses</a
-                                >
-                                <button class="watch-video">
-                                    <div class="icon">
-                                        <img
-                                            src="./assets/img/play.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <span>Watch Video</span>
-                                </button>
+
+                            <div class="hero-wrap hide-on-pc">
+                                <div class="cta-group">
+                                    <a href="#!" class="btn hero-cta">
+                                        See Courses
+                                    </a>
+                                    <button class="watch-video hide-on-mobile">
+                                        <div class="icon">
+                                            <img
+                                                src="./assets/img/play.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <span>Watch Video</span>
+                                    </button>
+                                </div>
+                                <div class="hero-stats-wrap">
+                                    <p class="desc">Recent engagement</p>
+                                    <p class="desc stats">
+                                        <strong>50K</strong> Students
+                                        <strong>70+</strong> Courses
+                                    </p>
+                                </div>
                             </div>
-                            <p class="desc">Recent engagement</p>
-                            <p class="desc stats">
-                                <strong>50K</strong> Students
-                                <strong>70+</strong> Courses
-                            </p>
+                        </div>
+
+                        <div class="content-block">
+                            <div class="hero-wrap">
+                                <h1 class="heading">
+                                    Learn without limits and spread knowledge.
+                                </h1>
+                                <p class="desc">
+                                    Build new skills for that “this is my year”
+                                    feeling with courses, certificates, and
+                                    degrees from world-class universities and
+                                    companies.
+                                </p>
+                            </div>
+
+                            <div class="hero-wrap">
+                                <div class="cta-group">
+                                    <a href="#!" class="btn hero-cta">
+                                        See Courses
+                                    </a>
+                                    <button class="watch-video">
+                                        <div class="icon">
+                                            <img
+                                                src="./assets/img/play.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <span>Watch Video</span>
+                                    </button>
+                                </div>
+                                <div class="hero-stats-wrap">
+                                    <p class="desc">Recent engagement</p>
+                                    <p class="desc stats">
+                                        <strong>50K</strong> Students
+                                        <strong>70+</strong> Courses
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,7 +319,7 @@
                                 shine for the next future career.
                             </p>
                         </div>
-                        <div class="control">
+                        <div class="control show-on-pc">
                             <button class="control-btn">
                                 <svg
                                     width="8"
@@ -389,6 +478,40 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="control hide-on-pc">
+                            <button class="control-btn">
+                                <svg
+                                    width="8"
+                                    height="14"
+                                    viewBox="0 0 8 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M7 1L1 7L7 13"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                            <button class="control-btn">
+                                <svg
+                                    width="8"
+                                    height="14"
+                                    viewBox="0 0 8 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M1 1L7 7L1 13"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -510,6 +633,7 @@
                                 alt="Learner outcomes through our awesome platform"
                             />
                             <img
+                                class="higher"
                                 src="./assets/img/features-2.jpg"
                                 alt="Learner outcomes through our awesome platform"
                             />
@@ -572,7 +696,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-1.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -581,7 +705,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -593,7 +717,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-2.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -602,7 +726,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -614,7 +738,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-3.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -623,7 +747,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -635,7 +759,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-4.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -644,7 +768,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -656,7 +780,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-5.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -665,7 +789,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -677,7 +801,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-6.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -686,7 +810,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -698,7 +822,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-7.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -707,7 +831,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -719,7 +843,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-8.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -728,7 +852,7 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
@@ -740,7 +864,7 @@
                             <a href="#!">
                                 <img
                                     src="./assets/img/blog-9.jpg"
-                                    alt="How to become a pro web designer in 2022 and get remot job?"
+                                    alt="How to become a pro web designer in 2022 and get remote job?"
                                     class="thumb"
                                 />
                             </a>
@@ -749,14 +873,14 @@
                                 <h3 class="title">
                                     <a href="#!">
                                         How to become a pro web designer in 2022
-                                        and get remot job?
+                                        and get remote job?
                                     </a>
                                 </h3>
                                 <a href="#!" class="btn">Read More</a>
                             </div>
                         </div>
                     </div>
-                    <div class="dots">
+                    <div class="dots hide-on-mobile">
                         <span class="dot"></span>
                         <span class="dot active"></span>
                         <span class="dot"></span>
